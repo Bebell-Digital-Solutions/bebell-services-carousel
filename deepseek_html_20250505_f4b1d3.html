@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Bebell Carousel</title>
+  <style>
+    /* Basic Carousel Styling */
+    .bebell-carousel {
+      --item-width: 290px;
+      --item-gap: 1.5rem;
+      --animation-duration: 40s;
+    }
+    
+    .bebell-carousel-article {
+      position: absolute;
+      top: 0;
+      left: calc(100% + var(--item-gap));
+      width: var(--item-width);
+      height: 100%;
+      max-height: 500px;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid rgba(0,0,0,0.1);
+      border-radius: 20px;
+      background: white;
+      color: #314158;
+      animation: bebell-marquee var(--animation-duration) linear infinite;
+    }
+    
+    .bebell-carousel-article:nth-child(1) { animation-delay: 0s; }
+    .bebell-carousel-article:nth-child(2) { animation-delay: -10s; }
+    .bebell-carousel-article:nth-child(3) { animation-delay: -20s; }
+    .bebell-carousel-article:nth-child(4) { animation-delay: -30s; }
+    .bebell-carousel-article:nth-child(5) { animation-delay: 0s; }
+    .bebell-carousel-article:nth-child(6) { animation-delay: -10s; }
+    .bebell-carousel-article:nth-child(7) { animation-delay: -20s; }
+    .bebell-carousel-article:nth-child(8) { animation-delay: -30s; }
+    
+    .bebell-carousel-article img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 20px 20px 0 0;
+    }
+    
+    .bebell-carousel-article h2 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 0.75rem 1rem 0.25rem;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    .bebell-carousel-article p {
+      font-size: 0.9rem;
+      margin: 0.5rem 1rem;
+      flex-grow: 1;
+    }
+    
+    .bebell-carousel-article a {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 2rem 2rem;
+      padding: 0 1rem;
+      background: #df1783;
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-size: 20px;
+      transition: background 0.3s;
+      min-height: 50px;
+      box-sizing: border-box;
+      width: calc(100% - 4rem);
+    }
+
+    .bebell-carousel-article a:hover {
+      background: #f03d9f;
+    }
+    
+    @keyframes bebell-marquee {
+      100% {
+        transform: translateX(calc(-4 * (290px + 1.5rem)));
+      }
+    }
+    
+    /* Mask effect for fading edges */
+    .bebell-carousel::before,
+    .bebell-carousel::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100px;
+      z-index: 2;
+      pointer-events: none;
+    }
+    
+    .bebell-carousel::before {
+      left: 0;
+      background: linear-gradient(to right, white, transparent);
+    }
+    
+    .bebell-carousel::after {
+      right: 0;
+      background: linear-gradient(to left, white, transparent);
+    }
+    
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div class="bebell-carousel" style="position: relative; width: 100%; max-width: 2200px; height: 550px; overflow: hidden; margin: 0 auto;">
+    <!-- Carousel Items -->
+    <article class="bebell-carousel-article"><img src="https://cdn.shopify.com/s/files/1/0242/0175/6777/files/Portadas_Carousel_Widget_1.gif?v=1746474824" alt="Oficina Digital">
+    <h2>Oficina Digital</h2>
+    <p>Desarrolla una oficina en línea con Bebell Digital Solutions. Para Profesionales y Marcas Personales</p>
+    <a href="https://elnegocio.digital/oficina-digital">Más Información</a></article>
+    <article class="bebell-carousel-article"><img src="https://cdn.shopify.com/s/files/1/0242/0175/6777/files/Portadas_Carousel_Widget.gif?v=1746474524" alt="Consultorio Digital">
+    <h2>Consultorio Digital</h2>
+    <p>Desarrolla una clínica o consultorio en línea con Bebell Digital Solutions. Para Profesionales de la Salud y de bienestar, Veterinarios, Odontólogos, entre otros.</p>
+    <a href="https://elnegocio.digital/consultorio-digital">Más Información</a></article>
+    <article class="bebell-carousel-article"><img src="https://cdn.shopify.com/s/files/1/0242/0175/6777/files/Tienda_Digital_6b797456-b74e-4310-b40c-7f07ee51d37e.gif?v=1746469398" alt="Tienda Digital">
+    <h2>Tienda Digital</h2>
+    <p>Desarrolla una tienda en línea con Bebell Digital Solutions. Para Propietarios de Comercios y Tiendas al por Menor o Mayorista</p>
+    <a href="https://elnegocio.digital/tienda-digital">Más Información</a></article>
+    <article class="bebell-carousel-article"><img src="https://cdn.shopify.com/s/files/1/0242/0175/6777/files/Menu_Digital_165a9a26-389a-424f-822c-6fc685c65462.gif?v=1746469398" alt="Menú Digital">
+    <h2>Menú Digital</h2>
+    <p>Desarrolla un menú en línea con Bebell Digital Solutions. Para Propietarios de Restaurantes y Cafeterías.</p>
+    <a href="https://elnegocio.digital/menu-digital">Más Información</a></article>
+    <!-- Duplicates for seamless looping -->
+    <article class="bebell-carousel-article"><img src="https://cdn.shopify.com/s/files/1/0242/0175/6777/files/Portadas_Carousel_Widget_1.gif?v=1746474824" alt="Oficina Digital">
+    <h2>Oficina Digital</h2>
+    <p>Desarrolla una oficina en línea con Bebell Digital Solutions. Para Profesionales y Marcas Personales</p>
+    <a href="https://elnegocio.digital/oficina-digital">Más Información</a></article>
+    <article class="bebell-carousel-article"><img src="https://cdn.shopify.com/s/files/1/0242/0175/6777/files/Portadas_Carousel_Widget.gif?v=1746474524" alt="Consultorio Digital">
+    <h2>Consultorio Digital</h2>
+    <p>Desarrolla una clínica o consultorio en línea con Bebell Digital Solutions. Para Profesionales de la Salud y de bienestar, Veterinarios, Odontólogos, entre otros.</p>
+    <a href="https://elnegocio.digital/consultorio-digital">Más Información</a></article>
+    <article class="bebell-carousel-article"><img src="https://cdn.shopify.com/s/files/1/0242/0175/6777/files/Tienda_Digital_6b797456-b74e-4310-b40c-7f07ee51d37e.gif?v=1746469398" alt="Tienda Digital">
+    <h2>Tienda Digital</h2>
+    <p>Desarrolla una tienda en línea con Bebell Digital Solutions. Para Propietarios de Comercios y Tiendas al por Menor o Mayorista</p>
+    <a href="https://elnegocio.digital/tienda-digital">Más Información</a></article>
+    <article class="bebell-carousel-article"><img src="https://cdn.shopify.com/s/files/1/0242/0175/6777/files/Menu_Digital_165a9a26-389a-424f-822c-6fc685c65462.gif?v=1746469398" alt="Menú Digital">
+    <h2>Menú Digital</h2>
+    <p>Desarrolla un menú en línea con Bebell Digital Solutions. Para Propietarios de Restaurantes y Cafeterías.</p>
+    <a href="https://elnegocio.digital/menu-digital">Más Información</a></article>
+  </div>
+</body>
+</html>
