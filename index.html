@@ -26,9 +26,18 @@
       background: white;
       color: #314158;
       animation: bebell-marquee var(--animation-duration) linear infinite;
-      box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.2);
-filter: drop-shadow(0 5px 5px rgba(0,0,0,0.05));
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1), 
+              0 6px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
+.bebell-carousel-article:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15), 
+              0 8px 8px rgba(0,0,0,0.1);
+}
+
+    
     
     .bebell-carousel-article:nth-child(1) { animation-delay: 0s; }
     .bebell-carousel-article:nth-child(2) { animation-delay: -10s; }
@@ -54,8 +63,9 @@ filter: drop-shadow(0 5px 5px rgba(0,0,0,0.05));
     }
     
     .bebell-carousel-article p {
-      font-size: 0.9rem;
-      margin: 0.5rem 1rem;
+      font-size: .95rem;
+      line-height: 1.2;
+      margin: .7rem 1rem;
       flex-grow: 1;
     }
     
