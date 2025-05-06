@@ -2,7 +2,7 @@
 
 A responsive, auto-scrolling carousel to showcase Bebell services. Designed for easy embedding via iframe.
 
-![Carousel Preview](https://cdn.shopify.com/s/files/1/0242/0175/6777/files/Portadas_Carousel_Widget_1.gif?v=1746474824)
+![Carousel Preview](https://bucket.mlcdn.com/a/3336/3336910/images/6eaa714505c85a386bc7c8f9911d77728879afb3.png))
 
 ## Features
 - 🚀 **Auto-scrolling** animation (40s loop)
