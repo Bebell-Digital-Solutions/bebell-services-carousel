@@ -33,7 +33,7 @@ Edit these CSS variables in `index.html` to tweak the design:
 ```
 
 ## Hosted Demo
-👉 [Live Preview](https://[your-username].github.io/bebell-services-carousel/)
+👉 [Live Preview](https://bebell-digital-solutions.github.io/bebell-services-carousel/)
 
 ## How It Works
 1. **Duplicate cards** create seamless looping
@@ -43,18 +43,4 @@ Edit these CSS variables in `index.html` to tweak the design:
 ## Need Help?
 - Report issues [here](../../issues)
 - Want more services added? Edit `index.html`
-
----
-
-### How to Add This to Your Repo:
-1. In your GitHub repository (`bebell-services-carousel`), click **Add file** → **Create new file**
-2. Name it `README.md`
-3. Paste the above content (replace `[your-username]` with your GitHub username)
-4. Click **Commit changes**
-
-Let me know if you'd like to add:
-- Screenshots
-- Technical requirements
-- Contribution guidelines
-- License info
 
